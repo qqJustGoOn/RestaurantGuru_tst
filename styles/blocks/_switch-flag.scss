@@ -1,0 +1,50 @@
+.switch-flag {
+  &__current-flag {
+    cursor: pointer;
+  }
+
+  &__dropdawn-container {
+    padding: 28px 18px 4px;
+    min-width: 164px;
+    position: absolute;
+    top: -13px;
+    right: 0;
+    background-color: var(--color-white);
+    border-radius: 0 0 var(--border-radius-small) var(--border-radius-small);
+    box-shadow: 0 0 8px 0 rgba(134, 135, 137, 0.25);
+    z-index: 101;
+    display: none;
+
+    .close-button {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: 10px;
+      right: 10px;
+      color: #c4c4c4;
+      cursor: pointer;
+    }
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  &__link {
+    padding-block: 11px;
+    font-size: 15px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      margin-right: 15px;
+      width: 25px;
+    }
+  }
+
+  &__show {
+    display: block;
+  }
+}

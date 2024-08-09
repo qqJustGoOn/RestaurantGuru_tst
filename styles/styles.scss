@@ -1,0 +1,48 @@
+@import "_normalize.scss", "_fonts.scss", "_mixins.scss", "_variables.scss",
+  "_media.scss";
+
+@import "blocks/header", "blocks/field", "blocks/search-form",
+  "blocks/switch-flag", "blocks/breadcrumbs", "blocks/restaurants",
+  "blocks/restaurant-card";
+
+body {
+  font-family: var(--font-family);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.25;
+  background-color: #f6f6f6;
+
+  @include mobile {
+    font-size: 13px;
+  }
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+//скрываем элемент на моб. устройствах
+.hidden-mobile {
+  @include mobile-s {
+    display: none !important;
+  }
+}

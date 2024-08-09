@@ -1,0 +1,52 @@
+.restaurants {
+  padding-bottom: 50px;
+  overflow: hidden;
+
+  &__header {
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+
+    @include mobile-s {
+      padding-top: 24px;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    font-family: var(--second-family);
+    font-weight: 500;
+    line-height: 1.17;
+    margin-bottom: 10px;
+
+    @include mobile-s {
+      font-size: 24px;
+    }
+  }
+
+  &__link-all {
+    font-size: 15px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+
+    @include hover {
+      opacity: 1;
+    }
+
+    @include mobile-s {
+      display: none;
+    }
+  }
+
+  &__slider {
+    position: relative;
+
+    .swiper {
+      @media (max-width: 768px) {
+        overflow: visible;
+      }
+    }
+  }
+}

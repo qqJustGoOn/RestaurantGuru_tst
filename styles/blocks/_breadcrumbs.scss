@@ -1,0 +1,32 @@
+.breadcrumbs {
+  background-color: #424242;
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 400;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    padding-block: 11px;
+    height: 40px;
+  }
+
+  &__item {
+    & + &::before {
+      content: "";
+      display: inline-block;
+      padding-inline: 4px;
+      border-right: 1px solid currentcolor;
+      transform: rotate(20deg);
+      height: 12px;
+    }
+
+    &[aria-current="page"] {
+      font-weight: 700;
+    }
+  }
+
+  @include mobile-s {
+    display: none;
+  }
+}

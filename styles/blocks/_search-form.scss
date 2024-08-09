@@ -1,0 +1,41 @@
+.search-form {
+  &__establishments {
+    &::after {
+      content: "";
+      width: 1px;
+      height: 28px;
+      position: absolute;
+      top: 6px;
+      right: 0;
+      background-color: #cfcfcf;
+    }
+  }
+
+  &__city {
+    .field__input {
+      padding-left: 55px;
+      padding-right: 11px;
+      border-left: none;
+    }
+  }
+
+  &__button {
+    @include reset-btn;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    background-color: var(--color-dark);
+    border-radius: 0 var(--border-radius-small) var(--border-radius-small) 0;
+
+    svg {
+      fill: var(--color-white);
+    }
+  }
+
+  @media (max-width: 944px) {
+    display: none;
+  }
+}

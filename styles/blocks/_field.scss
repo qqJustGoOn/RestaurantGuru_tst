@@ -1,0 +1,33 @@
+.field {
+  position: relative;
+
+  &__label {
+    position: absolute;
+    padding-left: 14px;
+    left: 0;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 40px;
+    color: #010101;
+  }
+
+  &__input {
+    padding: 0;
+    padding-left: 76px;
+    padding-right: 30px;
+    width: 100%;
+    height: 40px;
+    font: var(--font-family);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 40px;
+    border: 1px solid #cfcfcf;
+    color: #010101;
+    outline: none;
+
+    &[name="establishments"] {
+      border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+      border-right: none;
+    }
+  }
+}
